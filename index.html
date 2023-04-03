@@ -15,15 +15,25 @@
         <form method="GET" action="results.html">
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
+                <span class="required-field">*</span>
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                <span class="required-field">*</span>
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" minimum="21" maximum="120" />
+                <h5>Must be ages 25 or older to enter the competition!</h5>
             </div>
+
+ 
+
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
+                    <span class="required-field">*</span>
+                
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -33,8 +43,7 @@
                     <label for="city">Your City</label>
                     <input type="text" id="city" name="city">
                     <label for="state">Your State</label>
-                    <input list="state-list" id="state" name="state">
-                    <datalist id="state-list">
+                    <select name="state">
                         <option value="AK">Alaska</option>
                         <option value="AL">Alabama</option>
                         <option value="AR">Arkansas</option>
@@ -84,9 +93,9 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WV">West Virginia</option>
                         <option value="WY">Wyoming</option>
-                    </datalist>
+                    </select>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="zip">
                 </div>
             </fieldset>
 

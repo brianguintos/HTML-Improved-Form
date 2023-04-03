@@ -35,7 +35,7 @@
         let address = urlParams.get('address') 
         let cityStateZip = `${urlParams.get('city')}, ${urlParams.get('state')} ${urlParams.get('zip')}`
         let emailMessage = document.createElement('p')
-        
+
         // Fill the page with the user's personal information
         document.getElementById('disclaimer').textContent = `Thank you, ${name}, for entering our once in a lifetime vacation contest!`
         emailMessage.append(`${winner ? 'As our chosen winner' : 'Whenever we\'d like to send marketing materials to you'}, we will contact you via email at ${email}, and send written correspondence to the following mailbox:`)
